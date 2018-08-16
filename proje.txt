@@ -1,0 +1,75 @@
+﻿23/07/2018 \ 27/07/2018 --------------
+Pzrts   ------
+Çalışılan Kurumun ve Birimin Tanıtılması
+Salı    ------
+Hazırlayacağım web programı için gereken VSCode, MongoDB, Node paketleri ve programlarının kurulması. Sistem tarafında yapılan işler hakkında bilgi almak
+Çrşmb   ------
+Programın ön yüzünde kullanılacak React paketinin hazırlanması, ilk kez açılıp kontrollerinin gerçekleştirilmesi
+Prşmb   ------
+Sistem tarafında Sistem Monitör hakkında yapılan işler, kullanılan programlar hakkında detaylı bilgi alma, ön yüzün hazırlıklarına başlmaa
+Cuma    ------
+Hazır statik sayfaların kabataslak tamamlanması. Header'ın bulunan location'a göre dinamik güncellenmesinin sağlanması.
+
+30/07/2018 \ 03/08/2018 --------------
+Pzrts   ------
+"Mongoose" paketi ile MongoDB'ye bağlanma. Schema, Connections ve Query'nin nasıl kullanılacağını araştırma.
+Salı    ------
+Basit bir User şeması oluşturarak, çalışmasını test etme. "Express" paketi ile API oluşturmaya başlama.
+Çrşmb   ------
+Register API'nın yazılması, "Postman" kullanılarak test edilmesi. React kullanarak Register formunun nasıl yazılacağını araştırma.
+Prşmb   ------
+Ön yüzde Login ve Register formlarının yazılması. Ön yüzle arka yüzün bağlanması.
+Cuma    ------
+Hata mesajlarının back-end'den front-end'e yollanması. Bu mesajların ön yüzde gösterilemsi. Uygun CSS'in yazılması.
+
+06/08/2018 \ 10/08/2018 --------------
+Pzrts   ------
+Genel renk şeması ve tema belirlenerek statik sayfaların tasarımının tamamen tamamlanması. Kargo şeması oluşturarak kargo API'ına başlanması.
+Salı    ------
+Kargo API'da "kargo-ekle", "kargo-takip", "kargo-duzenle" routelarının tamamlanması. Çalışmalarının testleri.
+Çrşmb   ------
+Redux store kullanarak arka yüzde user API'ı tarafından "login" route'unda üretilen token'in tutulması. Ayrıca bu tokenin süresi bitmişse, sayfa yenilenmesinde otomatik temizlenmesi.
+Prşmb   ------
+Kargo API'da "kargo-liste", "kargo-duzenle/islem-ekle", "kargo-duzenle/islem-sil", "kargo-sil" routelarının yazılması ve testleri.
+Cuma    ------
+Yazılan kargo API'ları için ön yüz çalışmaları. Kargo ekle ve kargo takip ekranlarının yazılması.
+
+13/08/2018 \ 17/08/2018 --------------
+Pzrts   ------
+Kargo takip ekranınında girişli kullanıcılar için düzenle butonunun gözükmesi, ve bu butona basınca verilerin input'a dönüşüp, düzenlemenin sağlanması.
+Salı    ------
+Kargo takip ekranında işlem için ekleme ve silme butonlarının eklenmesi. Girdi için inputların eklenmesi.
+Çrşmb   ------
+Kargo liste ekranının sadece girişli kullanıcılar için gösterilmesi. Bu ekrana kargo girdisi silme butonu eklenmesi.
+Prşmb   ------
+API'ların tokeni okuyup, doğru gelmeyen tokenlerde 401 hatası yollanmasının sağlanması. Bunun genel testleri. Küçük birkaç hatanın düzeltilmesi.
+Cuma    ------
+Projenin son hatalarının düzeltilmesi, testlerin tamamlanması ve programın tamamlanması.
+
+
+3. gün 
+Ön yüzde Bootstrap tarzı bir şeyler kullanmam gerektiğini biliyorum. Ancak Bootstrap'in resmi React paketi sadece v3'ü destekliyordu. Bu yüzden ben de Bootstrap'in normal paketini indirip, yanına MDBootstrap'i kurdum. Bu şekilde, hem Bootstrap'i kullanabilecektim, hem de Material Design ögelerine sahip componentlara sahip olacaktım. Bu iki paketi kurduktan sonra, Bootstrap css'ini sistemin root dosyasında import ettim, böylelikle "MDBootstrap" paketi her yerde bu css'e erişebilecekti. Zaten geri kalan componentlara mdbootstrap paketinden ulaşabiliyordum. Bundan sonra fonts.google.com sitesinden başlıklar ve normal yazılar için iki adet font seçtim. Bunu da sistemin root css'ine import ettim ve header ve diğer yazılar için fontu genel olarak belirledim. Son olarak cSS ayarlarında cSS Modules'ı kullanmak istiyordum. Yani her Component'ın kendine özgü bir CSS dosyası olması ve aynı isimde CSS class'ı olursa, bunların birbirine etki etmemesini istiyordum. Bu yüzden React root dosyasında (client) "npm run eject" kodunu yürütüp, Webpack ayarlarında gereken şeyleri düzenledim. Bundan sonra her şey tamamdı, artık sayfaları istediğim şekilde yazabilecektim. Dosya düzenini de oluşturup, index ve hakkımda gibi statik sayfaların js ve css dosyalarını oluşturdum.
+
+4. gün
+Bugün ilk önce sistem monitörcülerinden işlerinin ne olduğu hakkında bilgi aldım. Kibana, Icinga gibi programları kullanarak sunucu durumlarını 24 saat boyunca 3 vardiya şeklinde durmadan değişmeli gözetliyorlar. Sunucuların birinde veya çoğunda herhangi bir sorun olduğunda da sorunun kaynağını araştırarak ve bu duruma neden olacak şeyleri filtreleyerek, bir mail hazırlayıp sistem ve yazılım ekibine bu maili yolluyorlar. Bu mailde sorunun ne olduğu ve kontrol sistemlerinden alınmış ekran görüntüleri oluyor. Yani sorunu bir an önce bulup çözülmesine yardımcı olmak için buradalar ve zaten sistem ekibinin bulunduğu yerde çalışıyorlar. Ayrıca yaptıkları tek şey durup bir sorun çıkmasını beklemek de değil. Kendileri de sayfalara girip bazı testler uyguluyorlar. Mesela sayfanın birinde 404 veren bir dosya, ya da çıkmaması gereken bir hata varsa, bu hata hakkında hemen bir ticket açıp, durum hakkında yazılım ve sistemi bilgilendiriyorlar. Bu arada projede de Header ve Footerlar için ayrı bir klasör açıp, dosyalarını oluşturdum. MDBootstrap'in bana sağladığı Componentları kullanarak basit bir header ve footer oluşturdum. Ayrıca header'ın ekran aşağı doğru kaydırılınca küçülmesi için küçük bir animasyonda ekledim.
+
+5. gün
+Bugün artık ön yüz routing'ini ayarlamam gerekiyordu. Bu yüzden "react-router-dom" paketini kurarak, App.js dosyasında statik sayfaların Route'larını hazırladım, ayrıca bütün dosyayı BrowserRouter component'ıyla sardım. Böylece react-router-dom'un bana sağlayacağı şeyleri kolayca kullanabilecektim, ayrıca uygulamam single-page-application olacaktı. Eski tarz yazılmış sayfalarda, bir linke tıklandığında browser bütün sayfayı tekrardan yüklerdi, single-page olunca bundan kurtuluyordum yani. 
+
+Tüm bu ayarları yaptıktan sonra Header'a da yine react-router-dom'un bir component'ı olan NavLink'i import ederek, bulunduğum sayfaya göre ilgili li tagına "active" class'ını ekleyecek sistemi uyguladım. Yani "/" yolunda olduğumda Ana sayfanın arkası parlak olacak, "/iletisim" sayfasında olduğumda İletişim'in arkası parlak olacak gibi.
+
+8. gün
+Register API yazımına başladım. Ön yüzden gönderilen bilgileri alıp, database'e kaydetmem gerekiyordu. Bende İngilizce tanımları ve bodyparser'ın bana sağladığı kolaylıkları kullanarak ön yüzden gelenleri alıp, database'e kaydedecek bir kod yazdım. Bunun yanı sıra, kullanıcı tarafından girilen şifrenin olduğu gibi kaydedilmesini istemediğimden, bcrypt kütüphanesinden yararlanarak bilgilerin sunucuya kaydedilmesi sırasında şifrenin de hashlenip, o şekilde database'e gönderilmesini sağladım. Aynı zamanda bu işleme bir kontrolde ekledim. Kaydetme adımına başlamadan önce sistem database'e gidip sağlanmış olan email'in varolup olmadığını kontrol edecekti. Böylelikle hesapların özgün olabilmelerini sağlayacaktım.
+
+Bütün bu back-end kodlamasından sonra React ile ön yüzde kullanıcının girdilerini nasıl alıp, back-end'e gönderebileceğimi araştırmaya başladım. Yani Input'lardan datayı nasıl alabileceğimi ve gönder tuşunu nasıl yazacağımı.
+
+9
+
+
+
+
+Kaynaklar:
+Mongoose, Express, Passport ve Redux'ın nasıl kullanılacağı hakkında temel bilgi. // https://www.udemy.com/mern-stack-front-to-back/ 
+Kargo API'nda işlem ekleme silme, ve kargo silme işlemlerini nasıl yapabileceğimi bulduğum sayfa. // https://coursework.vschool.io/mongoose-crud/
+Ön yüz konusunda component ayarları ve kullanımları. // https://mdbootstrap.com/
+

@@ -1,0 +1,33 @@
+.container {
+    height: 550px;
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    z-index: 111;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.alt-container {
+    padding: 40px;
+}
+
+.geri {
+    color: black;
+    font-size: 24px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    cursor: pointer;
+}
+
+.error {
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+  display: block;
+  font-weight: 700;
+  color: red;
+}

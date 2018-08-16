@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#fff">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <title>LOSSKargo</title>
+    <style>
+    * {
+ box-sizing: border-box;
+}
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+html,
+body {
+ height: 100%;
+ position: relative;
+}
+.main-container {
+   min-height: 100vh; /* will cover the 100% of viewport */
+   overflow: hidden;
+   display: block;
+   position: relative;
+   padding-top: 100px;
+   padding-bottom: 260px; /* height of your footer */
+ }
+footer {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+}
+  @media (max-width: 768px) {
+    .main-container {
+      padding-bottom: 300px; /* height of your footer */
+    }
+  }
+</style>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="app-mount" class="main-container"></div>
+  </body>
+</html>

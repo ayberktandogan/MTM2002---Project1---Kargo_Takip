@@ -1,0 +1,101 @@
+.kart {
+  display: flex;
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.kart-ic {
+  width: calc(100% - 8rem);
+  display: inline-block;
+}
+
+.isim {
+  width: 25%;
+  display: inline-block;
+}
+
+.barkod {
+  width: 25%;
+  display: inline-block;
+}
+
+.adres {
+  width: 50%;
+  display: inline-block;
+}
+
+.sil:hover {
+  background-color: #ccc;
+}
+
+.lds-css {
+  position: absolute;
+  left: calc(50% - 100px);
+}
+
+@keyframes lds-bars {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes lds-bars {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.lds-bars {
+  position: relative;
+}
+.lds-bars div {
+  position: absolute;
+  width: 20px;
+  height: 80px;
+  top: 60px;
+  -webkit-animation: lds-bars 1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  animation: lds-bars 1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+.lds-bars div:nth-child(1) {
+  left: 30px;
+  background: #8cd0e5;
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+.lds-bars div:nth-child(2) {
+  left: 70px;
+  background: #376888;
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+.lds-bars div:nth-child(3) {
+  left: 110px;
+  background: #826b88;
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+.lds-bars div:nth-child(4) {
+  left: 150px;
+  background: #de786a;
+}
+.lds-bars {
+  width: 200px !important;
+  height: 200px !important;
+  -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+  transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+}
