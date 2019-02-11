@@ -12,11 +12,11 @@ const app = express()
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'))
-db.once('open', function() {
+db.once('open', function () {
   console.log('Mongo bağlandı.')
 })
 
-app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 mongoose.connect(keys.mongoURI)
@@ -26,7 +26,7 @@ const port = process.env.PORT || 5000;
 
 // Passport middleware
 app.use(passport.initialize());
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*")
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
   next()
@@ -39,7 +39,7 @@ require('./config/passport')(passport)
 app.use('/api/users', users)
 app.use('/api/kargo', kargos)
 
-if(process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'))
 
   app.get('*', (req, res) => {
